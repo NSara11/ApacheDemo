@@ -245,6 +245,7 @@
             </snapshots>
         </repository>
     </repositories>
+    <plugins>
 <plugin>
      				<groupId>org.cyclonedx</groupId>
      				<artifactId>cyclonedx-maven-plugin</artifactId>
@@ -261,4 +262,5 @@
        			  	<outputFormat>Json</outputFormat>
      			</configuration>
   			</plugin>
+    </plugins>
 </project>
