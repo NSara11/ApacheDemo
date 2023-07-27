@@ -197,6 +197,25 @@
             </plugin>
         </plugins>
 
+        <plugins>
+            <plugin>
+                 <groupId>org.cyclonedx</groupId>
+     				<artifactId>cyclonedx-maven-plugin</artifactId>
+     				<version>2.6.2</version>
+    				 <executions>
+        			<execution>
+           			<phase>package</phase>
+           			<goals>
+              			<goal>makeAggregateBom</goal>
+          			 </goals>
+       				 </execution>
+    				 </executions>
+    				 <configuration>
+       			  	<outputFormat>Json</outputFormat>
+     			</configuration>
+            </plugin>
+        </plugins>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -212,24 +231,6 @@
                         <skipRuntimeScope>true</skipRuntimeScope>
                     </configuration>
                     </plugin>
-            </plugins>
-                    <plugins>
-                <plugin>
-                    <groupId>org.cyclonedx</groupId>
-     				<artifactId>cyclonedx-maven-plugin</artifactId>
-     				<version>2.6.2</version>
-    				 <executions>
-        			<execution>
-           			<phase>package</phase>
-           			<goals>
-              			<goal>makeAggregateBom</goal>
-          			 </goals>
-       				 </execution>
-    				 </executions>
-    				 <configuration>
-       			  	<outputFormat>Json</outputFormat>
-     			</configuration>
-                </plugin>
             </plugins>
         </pluginManagement>
 
