@@ -196,7 +196,7 @@
                 </configuration>
             </plugin>
         </plugins>
-
+ <pluginManagement>
         <plugins>
             <plugin>
                  <groupId>org.cyclonedx</groupId>
@@ -215,7 +215,7 @@
      			</configuration>
             </plugin>
         </plugins>
-
+</pluginManagement>
         <pluginManagement>
             <plugins>
                 <plugin>
