@@ -196,8 +196,26 @@
                 </configuration>
             </plugin>
         </plugins>
- <pluginManagement>
-        <plugins>
+ 
+       
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.owasp</groupId>
+                    <artifactId>dependency-check-maven</artifactId>
+                    <version>7.2.1</version>
+                    <configuration>
+                        <suppressionFiles>
+                            <suppressionFile>src/etc/project-suppression.xml</suppressionFile>
+                        </suppressionFiles>
+                        <failBuildOnCVSS>7</failBuildOnCVSS>
+                        <skipProvidedScope>true</skipProvidedScope>
+                        <skipRuntimeScope>true</skipRuntimeScope>
+                    </configuration>
+                    </plugin>
+            </plugins>
+             <plugins>
             <plugin>
                  <groupId>org.cyclonedx</groupId>
      				<artifactId>cyclonedx-maven-plugin</artifactId>
@@ -215,23 +233,6 @@
      			</configuration>
             </plugin>
         </plugins>
-</pluginManagement>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.owasp</groupId>
-                    <artifactId>dependency-check-maven</artifactId>
-                    <version>7.2.1</version>
-                    <configuration>
-                        <suppressionFiles>
-                            <suppressionFile>src/etc/project-suppression.xml</suppressionFile>
-                        </suppressionFiles>
-                        <failBuildOnCVSS>7</failBuildOnCVSS>
-                        <skipProvidedScope>true</skipProvidedScope>
-                        <skipRuntimeScope>true</skipRuntimeScope>
-                    </configuration>
-                    </plugin>
-            </plugins>
         </pluginManagement>
 
     </build>
